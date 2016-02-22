@@ -1,2 +1,56 @@
-﻿body {
+﻿#scene {
+    width: 400px;
+    height: 650px;
+    top: calc(50% - 250px);
+    margin-left: calc(50% - 200px);
+    position: relative;
 }
+
+#pyramid {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+}
+
+section:nth-child(1) {
+    background-image: url('../img/background.png');
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.layer {
+    list-style: none;
+    cursor: pointer;
+}
+
+    .layer:first-child {
+        z-index: 6;
+        margin-left: -40px;
+    }
+
+    .layer:nth-child(2) {
+        margin-top: 120px;
+        margin-left: 52px;
+        z-index: 5;
+    }
+
+    .layer:nth-child(3) {
+        margin-top: 200px;
+        margin-left: 89px;
+        z-index: 4;
+    }
+
+    .layer:nth-child(4) {
+        margin-top: 260px;
+        margin-left: 115px;
+        z-index: 3;
+    }
+
+    .layer:nth-child(5) {
+        margin-top: 310px;
+        margin-left: 146px;
+        z-index: 2;
+    }
