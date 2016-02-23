@@ -32,7 +32,7 @@ section:nth-child(1) {
     }
 
     .layer:nth-child(2) {
-        margin-top: 120px;
+        margin-top: 110px;
         margin-left: 52px;
         z-index: 5;
     }
@@ -44,13 +44,55 @@ section:nth-child(1) {
     }
 
     .layer:nth-child(4) {
-        margin-top: 260px;
+        margin-top: 270px;
         margin-left: 115px;
         z-index: 3;
     }
 
     .layer:nth-child(5) {
-        margin-top: 310px;
+        margin-top: 330px;
         margin-left: 146px;
         z-index: 2;
     }
+
+.pyramidText {
+    position: absolute;
+    z-index: 10;
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -250px;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#reduce {
+    background-color: #a4c3ab;
+    /*left: -100%;*/
+}
+
+#reuse {
+    background-color: #8fc3bb;
+    /*right: -100%;*/
+}
+
+
+#recycle {
+    background-color: #b0d6e2;
+    /*top: -100%;*/
+}
+
+#recovery {
+    background-color: #a8a7be;
+    /*bottom: -100%;*/
+}
+
+.glyphicon-remove {
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
