@@ -71,23 +71,19 @@ section:nth-child(1) {
 
 #reduce {
     background-color: #a4c3ab;
-    /*left: -100%;*/
 }
 
 #reuse {
     background-color: #8fc3bb;
-    /*right: -100%;*/
 }
 
 
 #recycle {
     background-color: #b0d6e2;
-    /*top: -100%;*/
 }
 
 #recovery {
     background-color: #a8a7be;
-    /*bottom: -100%;*/
 }
 
 .glyphicon-remove {
@@ -95,4 +91,36 @@ section:nth-child(1) {
     cursor: pointer;
     font-size: 24px;
     padding: 10px;
+}
+
+.information {
+    position: absolute;
+    bottom: 70px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+    .information:hover {
+        transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+
+
+.introduction {
+    position: absolute;
+    top: 60px;
+    width: 700px;
+    height: auto;
+    padding: 20px;
+    left: 50%;
+    margin-left: -350px;
+    background-color: cadetblue;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
 }

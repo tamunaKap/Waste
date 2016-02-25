@@ -11,6 +11,15 @@
         $("#" + target).fadeIn();
     });
     $(".pyramidText .glyphicon-remove").click(function () {
-        $(this).parent(".pyramidText").hide();
+        $(this).parent(".pyramidText").hide(); 
+    });
+
+    $(".introduction .glyphicon-remove").click(function () {
+        $(".introduction").hide();
+    });
+    
+    $(".information").click(function() {
+        $(".introduction").fadeIn();
+
     });
 })
