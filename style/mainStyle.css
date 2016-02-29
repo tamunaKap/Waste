@@ -21,7 +21,7 @@ section {
 }
 
     section:first-child {
-        background-image: url('../img/background.png');
+        /*background-image: url('../img/background.png');*/
     }
 
     section:last-child {
@@ -37,12 +37,20 @@ section {
     background-color: rgba(255,255,255,0.5);
 }
 
-    #pyramid > figure {
-        top: calc(50% - 200px);
-        position: absolute;
-        margin-left: calc(50% - 200px);
-        cursor: pointer;
-    }
+#pyramidAnimation {
+    width: 500px;
+    background-color: red;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+}
+
+#pyramid #pyramidAnimation > figure {
+    cursor: pointer;
+}
 
 #scene {
     width: 400px;

@@ -30,24 +30,38 @@
 
     $("#scene li:last-child").click(function () {
         $("#scene").hide();
-        $("#pyramid >figure").show();
-        $("#pyramid >figure img").animate({
+        $("#pyramid #pyramidAnimation>figure").show();
+        $("#pyramid #pyramidAnimation>figure img").animate({
             width: "100px",
             height: "100px"
         }, {
             step: function () {
-                setTimeout(function () {
-                    $("#pyramid >figure").css('-webkit-transform', 'rotate(180deg)');
-                    $("#pyramid >figure").css('-moz-transform', 'rotate(180deg)');
-                    $("#pyramid >figure").css('transform', 'rotate(180deg)');
-                    $("#pyramid >figure").animate({
-                        top: "20px",
-                        left: "20px"
+                //setTimeout(function () {
+                    $("#pyramid #pyramidAnimation>figure").css('-webkit-transform', 'rotate(180deg)');
+                    $("#pyramid #pyramidAnimation>figure").css('-moz-transform', 'rotate(180deg)');
+                    $("#pyramid #pyramidAnimation>figure").css('transform', 'rotate(180deg)');
+                    $("#pyramidAnimation").animate({
+                        top: "270px",
+                        left: "80px"
                     });
 
-                }, 300);
+                //}, 300);
             }
-        }, 2500);
+        }, 1500);
+
+    });
+
+    $("#pyramidAnimation > figure").click(function () {
+        $("#pyramidAnimation").animate({
+            top: "50%",
+            left: "50%",
+            "margin-top": "-250px",
+            "margin-left": "-250px"
+        });
+        $("#pyramid .pyramidAnimation>figure").css('-webkit-transform', 'rotate(-180deg)');
+        $("#pyramid .pyramidAnimation>figure").css('-moz-transform', 'rotate(-180deg)');
+        $("#pyramid .pyramidAnimation>figure").css('transform', 'rotate(-180deg)');
+        $("#scene").show();
 
     });
 })
