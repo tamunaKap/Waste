@@ -6,21 +6,44 @@
     <script src="lib/bootstrap/js/bootstrap.js"></script>
     <script src="lib/parallax.js"></script>
     <script src="lib/zepto.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
     <script src="script/mainScript.js"></script>
 
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="lib/font-awesome-4.5.0/css/font-awesome.css" rel="stylesheet" />
-    <link href="style/mainStyle.css" rel="stylesheet" /> 
+    <link href="style/mainStyle.css" rel="stylesheet" />
     <link href='//fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 </head>
-<body> 
+<body>
     <section class="parallax-window" data-parallax="scroll">
-        <div id="pyramid">
+        <div id="pyramidromb">
             <div id="pyramidAnimation">
                 <figure hidden="hidden">
                     <img src="img/pyramid1.0.png" />
                 </figure>
             </div>
+
+            <div id="rombAnimation" hidden="hidden">
+                <figure>
+                    <img src="img/romb.png" />
+                </figure>
+            </div>
+            <div id="romb" hidden="hidden">
+                <figure data-target="bag">
+                    <img src="img/p2.1.png" />
+                </figure>
+                <figure data-target="recycleBin">
+                    <img src="img/p2.2.png" />
+                </figure>
+                <figure data-target="recycleCar">
+                    <img src="img/p2.3.png" />
+                </figure>
+                <figure data-target="garbageBlock">
+                    <img src="img/p2.4.png" />
+                </figure>
+            </div>
+
             <ul id="scene" class="scene border">
                 <li class="layer" data-depth="0.80" data-target="reduce"><img src="img/reduce.png"></li>
                 <li class="layer" data-depth="0.60" data-target="reuse"><img src="img/reuse.png"></li>
@@ -59,7 +82,184 @@
                     <p>Energy recovery form waste is the conversion of non-recyclable waste materials into useable heat, electricity, or fuel through a variety of processes, including combustion, gasification, anaerobic digestion, landfill gas recovery. This process is often called waste-to-energy. Currently, there are no facilities for energy recovery in Georgia. </p>
                 </div>
             </article>
+            <div class="rombArticles" hidden="hidden">
+                <span class="glyphicon glyphicon-remove"></span>
+                <article id="bag" hidden="hidden">
+                    <div class="col-xs-12">
+                        <p style="text-align: justify">
+                            According to the <a target="_blank" href="http://www.epa.gov/homeland-security-waste/waste-management-hierarchy-and-homeland-security-incidents">waste management hierarchy </a> , landfilling is the least preferable option and
 
+                            should be limited to the necessary minimum. However, in Georgia, disposals are the most
+
+                            preferable and <a href="http://www.kas.de/wf/doc/kas_39857-1522-1-30.pdf?141208110242" target="_blank">practically the only way for waste management </a> .
+                        </p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vwwsUEcGAX8" frameborder="0" allowfullscreen></iframe>
+                    </div>  <figure class="col-md-4 col-xs-8 col-xs-offset-2 col-md-offset-0">
+                        <img src="img/bagImg1.jpeg" class="img-responsive" />
+                    </figure>
+                    <figure class="col-md-4 col-xs-8 col-xs-offset-2 col-md-offset-0">
+                        <img src="img/bagImg2.jpeg" class="img-responsive" />
+                    </figure>
+                    <figure class="col-md-4 col-xs-8 col-xs-offset-2 col-md-offset-0">
+                        <img src="img/bagImg3.jpeg" class="img-responsive" />
+                    </figure>
+                    <div class="game col-xs-12">
+                        <div id="town">
+                            <figure id="metal">
+                                <img src="img/game/metalCan.png" />
+                            </figure>
+                            <figure id="glass">
+                                <img src="img/game/glassCan.png" />
+                            </figure>
+                            <figure id="papper">
+                                <img src="img/game/paperCan.png" />
+                            </figure>
+                            <figure id="plastic">
+                                <img src="img/game/plasticCan.png" />
+                            </figure>
+                        </div>
+                        <div id="garb">
+                            <figure data-target="papper">
+                                <img src="img/game/apple.png" />
+                            </figure>
+
+                            <figure data-target="papper">
+                                <img src="img/game/banana.png" />
+                            </figure>
+
+                            <figure data-target="plastic">
+                                <img src="img/game/bottle.png" />
+                            </figure>
+
+                            <figure data-target="papper">
+                                <img src="img/game/box.png" />
+                            </figure>
+
+                            <figure data-target="metal">
+                                <img src="img/game/coloredCans.png" />
+                            </figure>
+
+                            <figure data-target="glass">
+                                <img src="img/game/cup.png" />
+                            </figure>
+
+                            <figure data-target="papper">
+                                <img src="img/game/fish.png" />
+                            </figure>
+
+                            <figure data-target="plastic">
+                                <img src="img/game/floppy.png" />
+                            </figure>
+
+                            <figure data-target="glass">
+                                <img src="img/game/glassBottle.png" />
+                            </figure>
+
+                            <figure data-target="metal">
+                                <img src="img/game/ironCans.png" />
+                            </figure>
+
+                            <figure data-target="plastic">
+                                <img src="img/game/poliviz.png" />
+                            </figure>
+
+                        </div>
+                    </div>
+                </article>
+                <article id="recycleBin" hidden="hidden">
+                    <figure class="col-xs-12 infographic">
+                        <img src="img/recycleBinimg.jpg" class="img-responsive" />
+                    </figure>
+                </article>
+                <article id="recycleCar" hidden="hidden">
+                    <figure class="col-xs-12 col-sm-6">
+                        <img src="img/recycleCarImages/1-.JPG" class="img-responsive" />
+                    </figure>
+                    <figure class="col-xs-12 col-sm-6">
+                        <img src="img/recycleCarImages/1.JPG" class="img-responsive" />
+                    </figure>
+                    <figure class="col-xs-12 col-sm-6">
+                        <img src="img/recycleCarImages/2-.JPG" class="img-responsive" />
+                    </figure>
+                    <figure class="col-xs-12 col-sm-6">
+                        <img src="img/recycleCarImages/2.JPG" class="img-responsive" />
+                    </figure>
+                </article>
+                <article id="garbageBlock">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gomhBWSiyiM" frameborder="0" allowfullscreen></iframe>
+
+                    <h3> Introduction to Landfills</h3>
+                    <p>
+                        In Georgia there are 61 official landfills. In addition, there are dozens unofficial landfills near almost all towns and villages in the country. Lilo Landfill is the only disposal area located within 20 kilometers of Tbilisi that meets the landfill standards. However, there are other conditions that Lilo lacks to be considered as perfect: 1: According to International Civil Aviation Organization standards, no open landfill should be located within 9.6 km from an airport, Lilo landfill is 7 km away from Tbilisi International Airport. 2. the gas emitted from decomposing garbage at Lilo Landfill, must be collected to prevent gas build-up, which can cause combustion.
+                    </p> <p>
+                        Other landfills in Georgia have to be constructed using current technology and sanitation
+                        standards in order to meet <a href="http://ec.europa.eu/environment/waste/legislation/index.htm" target="_blank">EU waste legislation</a> .
+                    </p>
+                    <figure class="col-xs-12 infographic">
+                        <img src="img/garbageBlockIMg1.png" class="img-responsive" />
+                    </figure>
+                    <div class="slideImages">
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/--4--.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/-2-%20-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/-2-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/-4-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/-8-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/1--.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/1-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/2-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/3-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/3.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/4--.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/4.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/5-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/5.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/6-.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/6.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/7.JPG" class="img-responsive" />
+                        </figure>
+                        <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/garbageBlock/8-.JPG" class="img-responsive" />
+                        </figure>
+
+                    </div>
+                    <figure class="col-xs-12 infographic">
+                        <img src="img/garbageBlockImage.jpeg" class="img-responsive" />
+                    </figure>
+                </article>
+            </div>
         </div>
         <figure class="information">
             <img src="img/infoButton.png" alt="infromation" />
@@ -86,10 +286,9 @@
             </p>
 
         </article>
+
+
     </section>
-    <section>
-        <p>asd</p>
-      
-    </section>
+    <!--<section></section>-->
 </body>
 </html>

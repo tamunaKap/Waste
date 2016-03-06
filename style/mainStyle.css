@@ -1,6 +1,6 @@
 ﻿html {
-    overflow-y: scroll;
-    overflow-x: hidden;
+    /*overflow-y: scroll;
+    overflow-x: hidden;*/
 }
 
 ::-webkit-scrollbar {
@@ -24,21 +24,21 @@ section {
         background-image: url('../img/background.png');
     }
 
-    section:last-child {
+/*section:last-child {
         background-color: red;
-    }
+    }*/
 
 
 
-#pyramid {
+#pyramidromb {
     width: 100vw;
     height: 100vh;
     text-align: center;
     background-color: rgba(255,255,255,0.5);
 }
 
-#pyramidAnimation {
-    width: 500px; 
+#pyramidAnimation, #rombAnimation {
+    width: 500px;
     height: 500px;
     position: absolute;
     top: 50%;
@@ -47,17 +47,30 @@ section {
     margin-left: -250px;
 }
 
-#pyramid #pyramidAnimation > figure {
-    cursor: pointer;
-}
+    #pyramidAnimation > figure, #rombAnimation > figure {
+        cursor: pointer;
+    }
 
-#scene {
-    width: 400px;
-    height: 650px;
+#scene, #romb {
+    width: 440px;
+    height: 400px;
     top: calc(50% - 250px);
     margin-left: calc(50% - 200px);
     position: relative;
 }
+
+#romb {
+    background-image: url("../img/p2back.png");
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 25px;
+}
+
+    #romb figure {
+        cursor: pointer;
+        margin-top: 15px;
+    }
 
 .layer {
     list-style: none;
@@ -161,4 +174,92 @@ section {
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+}
+
+
+.rombArticles {
+    width: calc(100%-200px);
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(255,255,255,0.3);
+    overflow-y: scroll;
+    top: 0px;
+    z-index: 888;
+    left: 100px;
+    right: 100px;
+}
+
+
+.game {
+    width: 100%;
+    height: 500px;
+    margin-top: 120px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+#town {
+    bottom: 200px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    width: 700px;
+    margin: 0 auto;
+    height: 400px;
+    text-align: center;
+    background-image: url("../img/game/town.png");
+}
+
+    #town figure {
+        float: left;
+        margin-top: 280px;
+    }
+
+    #town img {
+        max-height: 100px;
+    }
+
+#garb {
+    margin-top: 10px;
+}
+
+    #garb figure {
+        float: left;
+        cursor: pointer;
+    }
+
+    #garb img {
+        height: 50px;
+    }
+
+#recycleCar figure {
+    margin-top: 20px;
+    padding: 30px;
+}
+
+
+.rombArticles article {
+    font-family: 'Abel', sans-serif;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+.infographic img {
+    margin: 10px auto; 
+    margin-bottom: 20px;
+}
+
+
+#garbageBlock .slideImages img {
+    height: 200px;
+    margin-top: 10px;
+
+}
+
+.rombArticles .glyphicon-remove {
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+    padding: 10px;
+    color: black;
 }
