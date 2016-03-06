@@ -21,7 +21,7 @@ section {
 }
 
     section:first-child {
-        /*background-image: url('../img/background.png');*/
+        background-image: url('../img/background.png');
     }
 
     section:last-child {
@@ -38,8 +38,7 @@ section {
 }
 
 #pyramidAnimation {
-    width: 500px;
-    background-color: red;
+    width: 500px; 
     height: 500px;
     position: absolute;
     top: 50%;

@@ -34,20 +34,15 @@
         $("#pyramid #pyramidAnimation>figure img").animate({
             width: "100px",
             height: "100px"
-        }, {
-            step: function () {
-                //setTimeout(function () {
-                    $("#pyramid #pyramidAnimation>figure").css('-webkit-transform', 'rotate(180deg)');
-                    $("#pyramid #pyramidAnimation>figure").css('-moz-transform', 'rotate(180deg)');
-                    $("#pyramid #pyramidAnimation>figure").css('transform', 'rotate(180deg)');
-                    $("#pyramidAnimation").animate({
-                        top: "270px",
-                        left: "80px"
-                    });
-
-                //}, 300);
-            }
-        }, 1500);
+        }, 100, function () {
+            $("#pyramid #pyramidAnimation>figure").css('-webkit-transform', 'rotate(180deg)');
+            $("#pyramid #pyramidAnimation>figure").css('-moz-transform', 'rotate(180deg)');
+            $("#pyramid #pyramidAnimation>figure").css('transform', 'rotate(180deg)');
+            $("#pyramidAnimation").animate({
+                top: "270px",
+                left: "80px"
+            });
+        });
 
     });
 
@@ -57,11 +52,19 @@
             left: "50%",
             "margin-top": "-250px",
             "margin-left": "-250px"
+        }, 500, function () {
+            $("#pyramid .pyramidAnimation>figure").css('-webkit-transform', 'rotate(-180deg)');
+            $("#pyramid .pyramidAnimation>figure").css('-moz-transform', 'rotate(-180deg)');
+            $("#pyramid .pyramidAnimation>figure").css('transform', 'rotate(-180deg)');
+            setTimeout(function () {
+                $("#pyramid #pyramidAnimation>figure").hide();
+                $("#scene").show();
+                parallax = new Parallax(scene, {
+                    relativeInput: true
+                });
+            }, 100);
         });
-        $("#pyramid .pyramidAnimation>figure").css('-webkit-transform', 'rotate(-180deg)');
-        $("#pyramid .pyramidAnimation>figure").css('-moz-transform', 'rotate(-180deg)');
-        $("#pyramid .pyramidAnimation>figure").css('transform', 'rotate(-180deg)');
-        $("#scene").show();
+
 
     });
 })
