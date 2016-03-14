@@ -3,7 +3,9 @@
     $(".pyramidText").hide();
     var scene = document.getElementById('scene');
     var parallax = new Parallax(scene, {
-        relativeInput: true
+        relativeInput: true,
+        invertY: true,
+        limitX: 10,
     });
     $(".scene li").click(function () {
         var target = $(this).data("target");
@@ -20,7 +22,7 @@
     $(".information").click(function () {
         $(".introduction").fadeIn();
     });
-     
+
 
     $("#scene li:last-child").click(function () {
         $("#scene").hide();
@@ -29,9 +31,9 @@
             width: "100px",
             height: "100px"
         }, 100, function () {
-            $("#pyramidromb #pyramidAnimation>figure").css('-webkit-transform', 'rotate(180deg)');
-            $("#pyramidromb #pyramidAnimation>figure").css('-moz-transform', 'rotate(180deg)');
-            $("#pyramidromb #pyramidAnimation>figure").css('transform', 'rotate(180deg)');
+            //$("#pyramidromb #pyramidAnimation>figure").css('-webkit-transform', 'rotate(180deg)');
+            //$("#pyramidromb #pyramidAnimation>figure").css('-moz-transform', 'rotate(180deg)');
+            //$("#pyramidromb #pyramidAnimation>figure").css('transform', 'rotate(180deg)');
             $("#pyramidAnimation").animate({
                 top: "270px",
                 left: "80px"
@@ -51,9 +53,9 @@
             "margin-top": "-250px",
             "margin-left": "-250px"
         }, 500, function () {
-            $("#pyramidromb .pyramidAnimation>figure").css('-webkit-transform', 'rotate(-180deg)');
-            $("#pyramidromb .pyramidAnimation>figure").css('-moz-transform', 'rotate(-180deg)');
-            $("#pyramidromb .pyramidAnimation>figure").css('transform', 'rotate(-180deg)');
+            //$("#pyramidromb .pyramidAnimation>figure").css('-webkit-transform', 'rotate(-180deg)');
+            //$("#pyramidromb .pyramidAnimation>figure").css('-moz-transform', 'rotate(-180deg)');
+            //$("#pyramidromb .pyramidAnimation>figure").css('transform', 'rotate(-180deg)');
             setTimeout(function () {
                 $("#pyramidromb #pyramidAnimation>figure").hide();
                 $("#scene").show();
@@ -83,11 +85,11 @@
                 left: "0",
                 "margin-top": "150px",
                 "margin-left": "-170px"
-            },10, function() {
+            }, 10, function () {
                 $("#" + rombArticlesId).show();
                 $(".rombArticles").show();
             });
-            $(".information").hide(); 
+            $(".information").hide();
         });
     });
 
@@ -103,7 +105,7 @@
             $("#rombAnimation").hide();
 
             if (rombCondition) {
-                $("#romb").show(); 
+                $("#romb").show();
             }
             $(".information").show();
         });
@@ -117,25 +119,25 @@
     $("#town figure").droppable({
         drop: handleCardDrop
     });
-     
+
     var correctCards = 0;
     function handleCardDrop(event, ui) {
         var canId = $(this).attr("id");
-        var garbageTarget = ui.draggable.data('target'); 
+        var garbageTarget = ui.draggable.data('target');
         if (canId == garbageTarget) {
             ui.draggable.addClass('correct');
-            ui.draggable.draggable('disable'); 
+            ui.draggable.draggable('disable');
             ui.draggable.position({ of: $(this), my: 'left top', at: 'left top' });
             ui.draggable.draggable('option', 'revert', false);
             correctCards++;
-        }  
+        }
         if (correctCards == 11) {
-           // alert("great");
+            // alert("great");
         }
 
     }
 
-    $(".rombArticles .glyphicon-remove").click(function() {
+    $(".rombArticles .glyphicon-remove").click(function () {
         $(".rombArticles").hide();
         rombCondition = true;
         $("#rombAnimation").click();

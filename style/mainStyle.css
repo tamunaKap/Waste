@@ -34,7 +34,7 @@ section {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
 }
 
 #pyramidAnimation, #rombAnimation {
@@ -79,7 +79,7 @@ section {
 
     .layer:first-child {
         z-index: 6;
-        margin-left: -40px;
+        margin-left: -80px;
     }
 
     .layer:nth-child(2) {
@@ -245,7 +245,7 @@ section {
 }
 
 .infographic img {
-    margin: 10px auto; 
+    margin: 10px auto;
     margin-bottom: 20px;
 }
 
@@ -253,7 +253,6 @@ section {
 #garbageBlock .slideImages img {
     height: 200px;
     margin-top: 10px;
-
 }
 
 .rombArticles .glyphicon-remove {
